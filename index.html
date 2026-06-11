@@ -1,37 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aryan Sarvaiya — Cloud Engineer & DevOps Enthusiast. MCA student at PES University specializing in AWS, Kubernetes, Docker, and Infrastructure Automation." />
-  <meta name="keywords" content="Cloud Engineer, DevOps, AWS, Kubernetes, Docker, Terraform, Infrastructure, Aryan Sarvaiya" />
-  <meta property="og:title" content="Aryan Sarvaiya — Cloud Engineer & DevOps Enthusiast" />
-  <meta property="og:description" content="Building scalable cloud infrastructure and automating everything in between." />
+  <meta name="description" content="Aryan Sarvaiya — Aspiring Cloud & DevOps Engineer. MCA student at PES University building production-grade infrastructure with AWS, Kubernetes, Docker and Terraform." />
+  <meta name="keywords" content="Cloud Engineer, DevOps, AWS, Kubernetes, Docker, Terraform, CI/CD, Aryan Sarvaiya" />
+  <meta property="og:title" content="Aryan Sarvaiya — Cloud & DevOps Engineer" />
+  <meta property="og:description" content="Building production-grade cloud infrastructure and automating everything in between." />
   <meta property="og:type" content="website" />
-  <title>Aryan Sarvaiya — Cloud Engineer & DevOps Enthusiast</title>
+  <title>Aryan Sarvaiya — Cloud & DevOps Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ░░ LOADER ░░ -->
+  <!-- LOADER -->
   <div id="loader" aria-hidden="true">
     <div class="loader-inner">
-      <div class="loader-cloud">
-        <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M64 38H18a14 14 0 110-28 14 14 0 0127.3-4A14 14 0 1164 38z" fill="currentColor"/>
+      <div class="loader-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M38 30H10a8 8 0 110-16 8 8 0 0115.6-2.4A8 8 0 1138 30z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
         </svg>
       </div>
-      <span class="loader-text">Initialising cloud…</span>
-      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
     </div>
   </div>
 
-  <!-- ░░ NAV ░░ -->
+  <!-- NAV -->
   <header id="nav">
-    <nav class="nav-inner">
+    <nav class="nav-inner container">
       <a href="#hero" class="nav-logo" aria-label="Home">
         <span class="logo-mark">AS</span>
         <span class="logo-name">Aryan Sarvaiya</span>
@@ -40,26 +39,23 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#focus">Focus</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-          <span class="icon-sun">☀️</span>
-          <span class="icon-moon">🌙</span>
-        </button>
-        <a href="#contact" class="btn-hire">Hire me</a>
+        <a href="#contact" class="btn-nav">Hire me</a>
         <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
-    <!-- mobile drawer -->
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
       <ul role="list">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#focus">Focus</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -68,398 +64,470 @@
 
   <main>
 
-    <!-- ░░ HERO ░░ -->
-    <section id="hero" aria-label="Introduction">
-      <!-- floating cloud deco -->
-      <div class="clouds-bg" aria-hidden="true">
-        <div class="cloud cloud-1">
-          <svg viewBox="0 0 120 70" fill="none"><path d="M96 54H24a20 20 0 110-40 20 20 0 0139-6A20 20 0 1196 54z" fill="currentColor"/></svg>
-        </div>
-        <div class="cloud cloud-2">
-          <svg viewBox="0 0 90 55" fill="none"><path d="M72 42H18a15 15 0 110-30 15 15 0 0129-4A15 15 0 1172 42z" fill="currentColor"/></svg>
-        </div>
-        <div class="cloud cloud-3">
-          <svg viewBox="0 0 60 40" fill="none"><path d="M48 30H12a10 10 0 110-20 10 10 0 0119.4-2.6A10 10 0 1148 30z" fill="currentColor"/></svg>
-        </div>
-        <div class="cloud cloud-4">
-          <svg viewBox="0 0 100 60" fill="none"><path d="M80 46H20a17 17 0 110-34 17 17 0 0133-5A17 17 0 1180 46z" fill="currentColor"/></svg>
-        </div>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        <div class="bg-orb orb-3"></div>
       </div>
-
-      <div class="hero-content reveal">
-        <p class="hero-eyebrow">Cloud Engineering · DevOps · AWS</p>
-        <h1 class="hero-headline">
-          <em>Aryan</em><br/>Sarvaiya
-        </h1>
-        <p class="hero-sub">
-          MCA student at PES University building production-grade cloud infrastructure.<br/>
-          Automating everything in between.
-        </p>
-        <div class="hero-ctas">
-          <a href="#projects" class="btn-primary">View Projects</a>
-          <a href="#about" class="btn-ghost">Learn more ↓</a>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-headline fade-up fd-1">
+            Cloud &amp; DevOps<br/>
+            <span class="headline-accent">Engineer</span>
+          </h1>
+          <p class="hero-sub fade-up fd-2">
+            Building production-grade cloud infrastructure. Automating deployments,
+            orchestrating containers, and designing systems that scale without breaking.
+          </p>
+          <div class="hero-ctas fade-up fd-3">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#about" class="btn-outline">About me ↓</a>
+          </div>
+          <div class="hero-stats fade-up fd-4">
+            <div class="stat-item">
+              <span class="stat-n" data-target="3">0</span>
+              <span class="stat-l">Projects</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-n" data-target="8">0</span>
+              <span class="stat-l">Core Tools</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+              <span class="stat-n" data-target="100" data-suffix="+">0</span>
+              <span class="stat-l">DevOps Days</span>
+            </div>
+          </div>
         </div>
-        <!-- stats strip -->
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-n">4+</span>
-            <span class="stat-l">Cloud Projects</span>
-          </div>
-          <div class="stat-div" aria-hidden="true"></div>
-          <div class="stat">
-            <span class="stat-n">8+</span>
-            <span class="stat-l">Technologies</span>
-          </div>
-          <div class="stat-div" aria-hidden="true"></div>
-          <div class="stat">
-            <span class="stat-n">100+</span>
-            <span class="stat-l">DevOps Days</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- hero illustration -->
-      <div class="hero-visual reveal-right" aria-hidden="true">
-        <div class="infra-card glass">
-          <div class="infra-header">
-            <span class="dot green"></span><span class="dot yellow"></span><span class="dot red"></span>
-            <span class="infra-title">deploy.yml</span>
-          </div>
-          <pre class="infra-code"><span class="kw">name:</span> Deploy to AWS
-<span class="kw">on:</span>
+        <div class="hero-card-wrap fade-up fd-2" aria-hidden="true">
+          <div class="code-card">
+            <div class="card-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="card-filename">deploy.yml</span>
+            </div>
+            <pre class="card-code"><span class="ck">name:</span> InfraPilot Deploy
+<span class="ck">on:</span>
   push:
     branches: [main]
-<span class="kw">jobs:</span>
-  <span class="fn">build-and-push:</span>
+<span class="ck">jobs:</span>
+  <span class="cf">deploy:</span>
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build Docker image
-        run: docker build -t <span class="str">infrapilot</span> .
-      - name: Push to ECR
-        run: aws ecr push …
-      - name: Deploy to <span class="str">EKS</span>
+      - <span class="ck">name:</span> Build &amp; push image
+        run: |
+          docker build -t <span class="cs">infrapilot</span> .
+          aws ecr push <span class="cs">$ECR_URI</span>
+      - <span class="ck">name:</span> Deploy to <span class="cs">EKS</span>
         run: kubectl apply -f k8s/</pre>
-        </div>
-        <div class="hero-badge glass">
-          <span class="badge-icon">☁️</span>
-          <span>AWS Learner</span>
-        </div>
-        <div class="hero-badge-2 glass">
-          <span class="badge-icon">🐳</span>
-          <span>Docker · K8s</span>
+          </div>
+          <div class="hero-pill pill-aws">☁️ AWS</div>
+          <div class="hero-pill pill-k8s">⚙️ Kubernetes</div>
         </div>
       </div>
     </section>
 
-    <!-- ░░ ABOUT ░░ -->
-    <section id="about" class="section-about" aria-label="About">
+    <!-- ABOUT -->
+    <section id="about" class="section">
       <div class="container">
-        <div class="section-label">About me</div>
+        <p class="section-eyebrow fade-up">About</p>
         <div class="about-grid">
-          <div class="about-text reveal">
-            <h2 class="section-heading">Turning infrastructure<br/><em>into craft.</em></h2>
-            <p>I'm a Cloud Computing graduate now pursuing my MCA at PES University Bangalore, with a singular focus on becoming a professional Cloud and DevOps engineer. Every project I build is an attempt to simulate the real pressures of production systems — uptime, observability, deployment velocity.</p>
-            <p>My day-to-day revolves around AWS, Docker, and Kubernetes, but the deeper obsession is the culture: infrastructure as code, automated pipelines, systems that heal themselves. I believe that great DevOps is invisible — things just work, and teams move fast.</p>
-            <p>Currently deep in AWS architecture, Kubernetes orchestration, and GitOps workflows. Looking to join a team that takes platform engineering seriously.</p>
-            <div class="about-pills">
-              <span class="pill">☁️ Cloud Infrastructure</span>
-              <span class="pill">🔧 Infrastructure as Code</span>
-              <span class="pill">📦 Containerization</span>
-              <span class="pill">🔁 CI/CD Automation</span>
-              <span class="pill">📊 Monitoring & Observability</span>
+          <div class="about-left fade-up">
+            <h2 class="section-title">Infrastructure<br/><em>as a craft.</em></h2>
+            <p>I'm a Cloud Computing graduate pursuing my MCA at PES University Bangalore. My focus is singular: become a proficient Cloud and DevOps engineer by building real systems, not just studying them.</p>
+            <p>Every project I work on is designed to mirror production pressures — uptime, observability, deployment velocity. My stack centers on AWS, Docker, and Kubernetes, but the philosophy runs deeper: infrastructure as code, self-healing systems, and pipelines that make deployment boring in the best way.</p>
+            <p>Currently deep in AWS architecture, Kubernetes orchestration, and Terraform automation. Ready to contribute to a platform team that ships fast and builds reliably.</p>
+            <div class="about-tags">
+              <span class="tag">Cloud Infrastructure</span>
+              <span class="tag">Infrastructure as Code</span>
+              <span class="tag">Containerization</span>
+              <span class="tag">CI/CD Automation</span>
+              <span class="tag">Monitoring &amp; Observability</span>
             </div>
           </div>
-          <div class="about-cards reveal-right">
-            <div class="about-card glass">
-              <span class="card-icon">🎓</span>
-              <div>
-                <strong>MCA Student</strong>
-                <span>PES University, Bangalore</span>
+          <div class="about-right fade-up fd-1">
+            <div class="info-card">
+              <div class="info-row">
+                <span class="info-icon">🎓</span>
+                <div>
+                  <strong>MCA Student</strong>
+                  <span>PES University, Bangalore</span>
+                </div>
               </div>
-            </div>
-            <div class="about-card glass">
-              <span class="card-icon">☁️</span>
-              <div>
-                <strong>B.Sc Cloud Computing</strong>
-                <span>Undergraduate Degree</span>
+              <div class="info-row">
+                <span class="info-icon">☁️</span>
+                <div>
+                  <strong>B.C.A(HONS)Cloud Computing</strong>
+                  <span>Undergraduate Degree</span>
+                </div>
               </div>
-            </div>
-            <div class="about-card glass">
-              <span class="card-icon">🚀</span>
-              <div>
-                <strong>Goal</strong>
-                <span>Cloud &amp; DevOps Engineer</span>
+              <div class="info-row">
+                <span class="info-icon">🚀</span>
+                <div>
+                  <strong>Career Goal</strong>
+                  <span>Cloud &amp; DevOps Engineer</span>
+                </div>
               </div>
-            </div>
-            <div class="about-card glass">
-              <span class="card-icon">📍</span>
-              <div>
-                <strong>Location</strong>
-                <span>Bangalore, India</span>
+              <div class="info-row">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <span>Bangalore, India</span>
+                </div>
               </div>
+              <a href="Aryan_Sarvaiya_Resume.pdf" class="btn-resume" download>
+    Download Resume
+</a>
             </div>
-            <a href="#" class="btn-resume glass" download>
-              ⬇ Download Résumé
-            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ░░ SKILLS ░░ -->
-    <section id="skills" class="section-dark" aria-label="Skills">
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
       <div class="container">
-        <div class="section-label light">Skills &amp; Tools</div>
-        <h2 class="section-heading light reveal">The stack<br/><em>I live in.</em></h2>
+        <p class="section-eyebrow fade-up">Expertise</p>
+        <h2 class="section-title fade-up">The tools<br/><em>I work with.</em></h2>
         <div class="skills-grid">
 
-          <div class="skill-group reveal">
-            <h3 class="skill-group-label">☁️ Cloud</h3>
-            <div class="skill-chips">
-              <span class="chip chip-aws">AWS</span>
-              <span class="chip chip-azure">Azure</span>
+          <div class="skill-block fade-up">
+            <h3 class="skill-cat">☁️ Cloud Platforms</h3>
+            <div class="skill-bars">
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>AWS</span><span>75%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="75"></div></div>
+              </div>
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Azure</span><span>40%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="40"></div></div>
+              </div>
             </div>
           </div>
 
-          <div class="skill-group reveal">
-            <h3 class="skill-group-label">⚙️ DevOps</h3>
-            <div class="skill-chips">
-              <span class="chip">Docker</span>
-              <span class="chip">Kubernetes</span>
-              <span class="chip">Terraform</span>
-              <span class="chip">Jenkins</span>
-              <span class="chip">GitHub Actions</span>
+          <div class="skill-block fade-up fd-1">
+            <h3 class="skill-cat">🐳 Containers &amp; Orchestration</h3>
+            <div class="skill-bars">
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Docker</span><span>80%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="80"></div></div>
+              </div>
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Kubernetes</span><span>65%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="65"></div></div>
+              </div>
             </div>
           </div>
 
-          <div class="skill-group reveal">
-            <h3 class="skill-group-label">🐧 OS</h3>
-            <div class="skill-chips">
-              <span class="chip">Linux</span>
-              <span class="chip">Ubuntu</span>
+          <div class="skill-block fade-up fd-2">
+            <h3 class="skill-cat">⚙️ Infrastructure &amp; CI/CD</h3>
+            <div class="skill-bars">
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Terraform</span><span>60%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="60"></div></div>
+              </div>
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>GitHub Actions</span><span>72%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="72"></div></div>
+              </div>
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Jenkins</span><span>50%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="50"></div></div>
+              </div>
             </div>
           </div>
 
-          <div class="skill-group reveal">
-            <h3 class="skill-group-label">💻 Programming</h3>
-            <div class="skill-chips">
-              <span class="chip">Python</span>
-              <span class="chip">Bash</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">TypeScript</span>
+          <div class="skill-block fade-up fd-3">
+            <h3 class="skill-cat">🖥️ Systems &amp; Scripting</h3>
+            <div class="skill-bars">
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Linux</span><span>78%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="78"></div></div>
+              </div>
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Bash</span><span>70%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="70"></div></div>
+              </div>
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Python</span><span>60%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="60"></div></div>
+              </div>
             </div>
           </div>
 
-          <div class="skill-group reveal">
-            <h3 class="skill-group-label">🗄️ Databases</h3>
-            <div class="skill-chips">
+          <div class="skill-block fade-up">
+            <h3 class="skill-cat">📊 Monitoring</h3>
+            <div class="skill-bars">
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Prometheus</span><span>55%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="55"></div></div>
+              </div>
+              <div class="sbar-item">
+                <div class="sbar-meta"><span>Grafana</span><span>55%</span></div>
+                <div class="sbar-track"><div class="sbar-fill" data-w="55"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-block fade-up fd-1">
+            <h3 class="skill-cat">🛠️ Other</h3>
+            <div class="chip-row">
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Networking</span>
               <span class="chip">PostgreSQL</span>
               <span class="chip">MySQL</span>
+              <span class="chip">Next.js</span>
             </div>
           </div>
 
-          <div class="skill-group reveal">
-            <h3 class="skill-group-label">📊 Monitoring</h3>
-            <div class="skill-chips">
-              <span class="chip chip-grafana">Grafana</span>
-              <span class="chip chip-prom">Prometheus</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- learning strip -->
-        <div class="learning-strip reveal">
-          <span class="learning-label">Currently learning →</span>
-          <div class="learning-ticker">
-            <span>AWS Solutions Architect</span>
-            <span>·</span>
-            <span>Kubernetes CKA</span>
-            <span>·</span>
-            <span>Terraform Associate</span>
-            <span>·</span>
-            <span>GitOps</span>
-            <span>·</span>
-            <span>ArgoCD</span>
-            <span>·</span>
-            <span>Helm</span>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ░░ PROJECTS ░░ -->
-    <section id="projects" class="section-projects" aria-label="Projects">
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
       <div class="container">
-        <div class="section-label">Work</div>
-        <h2 class="section-heading reveal">Projects that<br/><em>think at scale.</em></h2>
+        <p class="section-eyebrow fade-up">Work</p>
+        <h2 class="section-title fade-up">Projects built<br/><em>for production.</em></h2>
         <div class="projects-grid">
 
-          <article class="project-card reveal" data-index="01">
-            <div class="project-accent" style="--accent: var(--peach)"></div>
-            <div class="project-header">
-              <span class="project-tag">Platform</span>
-              <span class="project-number">01</span>
-            </div>
-            <h3 class="project-name">CloudLab</h3>
-            <p class="project-desc">A production-style cloud learning platform focused on practical cloud engineering concepts, infrastructure automation, deployment workflows, and real-world cloud practices. Built to simulate the rigors of an actual cloud environment.</p>
-            <div class="project-tech">
-              <span>AWS</span><span>Docker</span><span>Terraform</span><span>CI/CD</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-index="02">
-            <div class="project-accent" style="--accent: var(--mint)"></div>
-            <div class="project-header">
-              <span class="project-tag">Infrastructure</span>
-              <span class="project-number">02</span>
+          <article class="project-card fade-up" style="--accent:#F6C7A8">
+            <div class="project-top">
+              <span class="project-type">Platform</span>
+              <div class="project-links-inline">
+                <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
             </div>
             <h3 class="project-name">InfraPilot</h3>
-            <p class="project-desc">A production-grade cloud deployment platform inspired by Vercel and Railway. Focused on deployment automation, containerization, CI/CD, Kubernetes orchestration, monitoring, and cloud-native architecture end to end.</p>
+            <p class="project-desc">A production-grade cloud deployment platform inspired by Vercel, Railway, and Render. Handles deployment automation, containerization, CI/CD pipelines, Kubernetes orchestration, and real-time monitoring. Built to explore what a self-hosted PaaS looks like end to end.</p>
             <div class="project-tech">
-              <span>Kubernetes</span><span>GitHub Actions</span><span>Prometheus</span><span>Grafana</span>
+              <span>Next.js</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>Prometheus</span><span>Grafana</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
-            </div>
+            <div class="project-accent-bar"></div>
           </article>
 
-          <article class="project-card reveal" data-index="03">
-            <div class="project-accent" style="--accent: var(--sage)"></div>
-            <div class="project-header">
-              <span class="project-tag">Learning Log</span>
-              <span class="project-number">03</span>
-            </div>
-            <h3 class="project-name">100 Days of DevOps</h3>
-            <p class="project-desc">Documenting 100 days of practical DevOps: labs, cloud projects, automation workflows, Linux administration, container exercises, and infrastructure concepts. Each day a new layer of the stack.</p>
-            <div class="project-tech">
-              <span>Linux</span><span>Docker</span><span>Bash</span><span>AWS</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-index="04">
-            <div class="project-accent" style="--accent: var(--blue-soft)"></div>
-            <div class="project-header">
-              <span class="project-tag">End-to-End</span>
-              <span class="project-number">04</span>
+          <article class="project-card fade-up fd-1" style="--accent:#B8D8C0">
+            <div class="project-top">
+              <span class="project-type">End-to-End CI/CD</span>
+              <div class="project-links-inline">
+                <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
             </div>
             <h3 class="project-name">DevOps Production Project</h3>
-            <p class="project-desc">End-to-end CI/CD implementation with monitoring, logging, deployment automation, and cloud engineering best practices baked in from day one. A blueprint for how production deployments should work.</p>
+            <p class="project-desc">An end-to-end CI/CD implementation built with real production constraints in mind. Covers automated testing, containerized builds, deployment pipelines, centralized logging with the ELK stack, and a Prometheus + Grafana monitoring layer. A reference architecture for cloud-native workflows.</p>
             <div class="project-tech">
-              <span>Jenkins</span><span>Terraform</span><span>Prometheus</span><span>EKS</span>
+              <span>Jenkins</span><span>Terraform</span><span>Docker</span><span>ELK Stack</span><span>Prometheus</span><span>AWS EKS</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+            <div class="project-accent-bar"></div>
+          </article>
+
+          <article class="project-card fade-up fd-2" style="--accent:#C5D8F5">
+            <div class="project-top">
+              <span class="project-type">Learning Journal</span>
+              <div class="project-links-inline">
+                <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
             </div>
+            <h3 class="project-name">100 Days of DevOps</h3>
+            <p class="project-desc">A structured 100-day public learning challenge documenting hands-on DevOps practice. Each day covers real labs: Linux administration, Docker networking, AWS service configs, CI/CD workflows, Kubernetes deployments, and infrastructure automation. Every concept tested, not just read.</p>
+            <div class="project-tech">
+              <span>Linux</span><span>Docker</span><span>AWS</span><span>Bash</span><span>Kubernetes</span><span>Terraform</span>
+            </div>
+            <div class="project-accent-bar"></div>
           </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ░░ ROADMAP ░░ -->
-    <section id="roadmap" class="section-roadmap" aria-label="Career Roadmap">
+    <!-- CURRENT FOCUS -->
+    <section id="focus" class="section section-alt">
       <div class="container">
-        <div class="section-label">Journey</div>
-        <h2 class="section-heading reveal">The path<br/><em>forward.</em></h2>
-
-        <div class="roadmap-cols">
-          <!-- timeline -->
-          <div class="timeline reveal">
-            <div class="tl-item done">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <span class="tl-status">Completed</span>
-                <strong>Bachelor's in Cloud Computing</strong>
-                <p>Foundational cloud concepts, networking, and distributed systems.</p>
-              </div>
-            </div>
-            <div class="tl-item done">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <span class="tl-status">Completed</span>
-                <strong>Cloud &amp; DevOps Self-Learning</strong>
-                <p>Docker, Linux, GitHub Actions, and first cloud projects.</p>
-              </div>
-            </div>
-            <div class="tl-item done">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <span class="tl-status">Completed</span>
-                <strong>Hands-on Project Building</strong>
-                <p>CloudLab, InfraPilot, and 100 Days of DevOps launched.</p>
-              </div>
-            </div>
-            <div class="tl-item current">
-              <div class="tl-dot pulse"></div>
-              <div class="tl-body">
-                <span class="tl-status current-label">Now</span>
-                <strong>MCA at PES University</strong>
-                <p>Advanced computing, AWS deep-dives, and Kubernetes specialisation.</p>
-              </div>
-            </div>
-            <div class="tl-item future">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <span class="tl-status future-label">Next</span>
-                <strong>AWS Certifications</strong>
-                <p>Solutions Architect Associate → Professional track.</p>
-              </div>
-            </div>
-            <div class="tl-item future">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <span class="tl-status future-label">Goal</span>
-                <strong>Cloud / DevOps / SRE Role</strong>
-                <p>Contributing to platform teams building resilient, scalable systems.</p>
+        <p class="section-eyebrow fade-up">Right now</p>
+        <h2 class="section-title fade-up">Current<br/><em>Focus.</em></h2>
+        <div class="focus-grid">
+          <div class="focus-main fade-up">
+            <div class="focus-card primary-focus">
+              <div class="focus-pulse"></div>
+              <span class="focus-label">Primary project</span>
+              <h3>Building InfraPilot</h3>
+              <p>Designing and implementing a production-grade cloud deployment platform from scratch. Working through real engineering problems: multi-tenant isolation, container lifecycle management, automated rollbacks, and a unified metrics pipeline.</p>
+              <div class="focus-stack">
+                <span>Next.js</span><span>Docker</span><span>Kubernetes</span><span>AWS</span>
               </div>
             </div>
           </div>
+          <div class="focus-side fade-up fd-1">
+            <p class="focus-side-label">Also learning</p>
+            <div class="focus-items">
+              <div class="focus-item">
+                <span class="fi-icon">☁️</span>
+                <div>
+                  <strong>AWS Solutions Architect</strong>
+                  <span>VPC, IAM, ECS, EKS, RDS, CloudWatch</span>
+                </div>
+              </div>
+              <div class="focus-item">
+                <span class="fi-icon">🏗️</span>
+                <div>
+                  <strong>Terraform &amp; IaC</strong>
+                  <span>Modules, state management, remote backends</span>
+                </div>
+              </div>
+              <div class="focus-item">
+                <span class="fi-icon">⎈</span>
+                <div>
+                  <strong>Kubernetes (CKA Prep)</strong>
+                  <span>Networking, RBAC, Helm, ArgoCD, GitOps</span>
+                </div>
+              </div>
+              <div class="focus-item">
+                <span class="fi-icon">🔁</span>
+                <div>
+                  <strong>GitHub Actions</strong>
+                  <span>Advanced workflows, matrix builds, secrets</span>
+                </div>
+              </div>
+              <div class="focus-item">
+                <span class="fi-icon">📊</span>
+                <div>
+                  <strong>Monitoring &amp; Observability</strong>
+                  <span>Prometheus, Grafana, Loki, alerting rules</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- achievements -->
-          <div class="achievements reveal-right">
-            <h3 class="achieve-heading">Milestones</h3>
-            <div class="achieve-list">
-              <div class="achieve-item glass">
-                <span class="achieve-icon">🎓</span>
+    <!-- ROADMAP -->
+    <section id="roadmap" class="section">
+      <div class="container">
+        <p class="section-eyebrow fade-up">Journey</p>
+        <h2 class="section-title fade-up">Learning<br/><em>Roadmap.</em></h2>
+        <div class="roadmap-wrap">
+          <div class="timeline fade-up">
+
+            <div class="tl-item status-done">
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-badge done">Completed</span>
+                <h4>B.Sc Cloud Computing</h4>
+                <p>Foundational cloud concepts, distributed systems, networking, and virtualisation.</p>
+              </div>
+            </div>
+
+            <div class="tl-item status-done">
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-badge done">Completed</span>
+                <h4>Docker &amp; Linux Foundations</h4>
+                <p>Containers, shell scripting, file systems, process management, and networking basics.</p>
+              </div>
+            </div>
+
+            <div class="tl-item status-done">
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-badge done">Completed</span>
+                <h4>Production Projects Launched</h4>
+                <p>InfraPilot, DevOps Production Project, and 100 Days of DevOps all live on GitHub.</p>
+              </div>
+            </div>
+
+            <div class="tl-item status-now">
+              <div class="tl-node">
+                <div class="tl-dot pulse-dot"></div>
+                <div class="tl-line"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-badge now">Now</span>
+                <h4>MCA at PES University</h4>
+                <p>Advanced computing, AWS deep-dives, Kubernetes specialisation, and full-stack cloud engineering.</p>
+              </div>
+            </div>
+
+            <div class="tl-item status-next">
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-badge next">Next</span>
+                <h4>AWS Certified Solutions Architect</h4>
+                <p>Associate → Professional certification track, followed by CKA for Kubernetes.</p>
+              </div>
+            </div>
+
+            <div class="tl-item status-goal">
+              <div class="tl-node">
+                <div class="tl-dot"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-badge goal">Goal</span>
+                <h4>Cloud / DevOps / SRE Role</h4>
+                <p>Contributing to platform teams building resilient, scalable, automated cloud systems.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="milestones fade-up fd-2">
+            <h3 class="milestones-title">Milestones</h3>
+            <div class="milestone-list">
+              <div class="milestone-item">
+                <span>🎓</span>
                 <div>
                   <strong>Cloud Computing Graduate</strong>
-                  <span>B.Sc with specialisation in cloud platforms</span>
+                  <span>B.Sc specialising in cloud platforms</span>
                 </div>
               </div>
-              <div class="achieve-item glass">
-                <span class="achieve-icon">🔁</span>
+              <div class="milestone-item">
+                <span>🔁</span>
                 <div>
-                  <strong>Active DevOps Learner</strong>
-                  <span>100+ days of structured daily practice</span>
+                  <strong>100+ Days of DevOps</strong>
+                  <span>Structured daily practice, public on GitHub</span>
                 </div>
               </div>
-              <div class="achieve-item glass">
-                <span class="achieve-icon">🌐</span>
+              <div class="milestone-item">
+                <span>🏗️</span>
+                <div>
+                  <strong>3 Production-Style Projects</strong>
+                  <span>Real infrastructure, real constraints</span>
+                </div>
+              </div>
+              <div class="milestone-item">
+                <span>🌐</span>
                 <div>
                   <strong>Open Source Contributor</strong>
-                  <span>Projects and labs publicly available on GitHub</span>
+                  <span>All projects publicly available</span>
                 </div>
               </div>
-              <div class="achieve-item glass">
-                <span class="achieve-icon">🏗️</span>
+              <div class="milestone-item">
+                <span>📈</span>
                 <div>
-                  <strong>Project Builder</strong>
-                  <span>4 production-style cloud and DevOps projects</span>
-                </div>
-              </div>
-              <div class="achieve-item glass">
-                <span class="achieve-icon">📈</span>
-                <div>
-                  <strong>Continuous Learner</strong>
-                  <span>AWS, Kubernetes CKA, and Terraform Associate in progress</span>
+                  <strong>AWS &amp; CKA in Progress</strong>
+                  <span>Certification track underway</span>
                 </div>
               </div>
             </div>
@@ -468,66 +536,33 @@
       </div>
     </section>
 
-    <!-- ░░ TESTIMONIALS PLACEHOLDER ░░ -->
-    <section id="testimonials" class="section-testi section-dark" aria-label="Testimonials">
+    <!-- CONTACT -->
+    <section id="contact" class="section section-contact">
       <div class="container">
-        <div class="section-label light">Testimonials</div>
-        <h2 class="section-heading light reveal">What people<br/><em>will say.</em></h2>
-        <div class="testi-grid">
-          <div class="testi-card glass reveal">
-            <div class="testi-quote">"</div>
-            <p>Aryan's depth of understanding in cloud infrastructure — especially how he approaches CI/CD and observability — is well beyond what I'd expect from a student. He thinks in systems.</p>
-            <div class="testi-author">
-              <div class="testi-avatar" aria-hidden="true">M</div>
-              <div>
-                <strong>Mentor Name</strong>
-                <span>Senior Cloud Architect · Placeholder</span>
-              </div>
-            </div>
-          </div>
-          <div class="testi-card glass reveal">
-            <div class="testi-quote">"</div>
-            <p>What impressed me most was the quality of his project documentation and how he approached real-world DevOps problems — not textbook solutions, but production mindset from day one.</p>
-            <div class="testi-author">
-              <div class="testi-avatar" aria-hidden="true">P</div>
-              <div>
-                <strong>Professor Name</strong>
-                <span>PES University · Placeholder</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ░░ CONTACT ░░ -->
-    <section id="contact" class="section-contact" aria-label="Contact">
-      <div class="container">
-        <div class="section-label">Get in touch</div>
-        <h2 class="section-heading reveal">Let's build<br/><em>something real.</em></h2>
-        <p class="contact-sub reveal">Open to cloud engineering roles, DevOps internships, and collaboration on open-source infrastructure projects.</p>
-
-        <div class="contact-cards reveal">
-          <a href="mailto:sarvaiyaaryan675@gmail.com" class="contact-card glass">
-            <span class="contact-icon">✉️</span>
+        <p class="section-eyebrow fade-up">Get in touch</p>
+        <h2 class="section-title fade-up">Open to roles<br/><em>&amp; collaboration.</em></h2>
+        <p class="contact-sub fade-up">Available for cloud engineering roles, DevOps internships, and open-source infrastructure collaboration. I respond within 24 hours.</p>
+        <div class="contact-cards fade-up">
+          <a href="mailto:sarvaiyaaryan675@gmail.com" class="contact-card">
+            <div class="cc-icon">✉️</div>
             <div>
               <strong>Email</strong>
               <span>sarvaiyaaryan675@gmail.com</span>
             </div>
           </a>
-          <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" class="contact-card glass">
-            <span class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            </span>
+          <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener" class="contact-card">
+            <div class="cc-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </div>
             <div>
               <strong>GitHub</strong>
               <span>aryansarvaiya1305</span>
             </div>
           </a>
-          <a href="https://linkedin.com/in/aryansarvaiya" target="_blank" rel="noopener" class="contact-card glass">
-            <span class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            </span>
+          <a href="https://linkedin.com/in/aryansarvaiya" target="_blank" rel="noopener" class="contact-card">
+            <div class="cc-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
             <div>
               <strong>LinkedIn</strong>
               <span>Connect with me</span>
@@ -539,11 +574,10 @@
 
   </main>
 
-  <!-- ░░ FOOTER ░░ -->
   <footer class="footer">
     <div class="container footer-inner">
-      <span>© 2025 Aryan Sarvaiya</span>
-      <span class="footer-tagline">Built to run in production.</span>
+      <span>© <span id="yr"></span> Aryan Sarvaiya</span>
+      <span class="footer-mid">Built for production.</span>
       <a href="#hero" class="footer-top" aria-label="Back to top">↑</a>
     </div>
   </footer>
