@@ -3,522 +3,809 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aryan Sarvaiya — DevOps Engineer</title>
+  <meta name="description" content="Aryan Sarvaiya — Cloud Engineer & DevOps Engineer. Building scalable cloud infrastructure and modern DevOps solutions." />
+  <meta name="keywords" content="Cloud Engineer, DevOps Engineer, AWS, Docker, Kubernetes, Terraform, Ansible, CI/CD" />
+  <meta name="author" content="Aryan Sarvaiya" />
+  <meta property="og:title" content="Aryan Sarvaiya — Cloud & DevOps Engineer" />
+  <meta property="og:description" content="Building scalable cloud infrastructure and modern DevOps solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aryansarvaiya.dev" />
+  <meta name="theme-color" content="#749A91" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <title>Aryan Sarvaiya — Cloud & DevOps Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="animations.css">
 </head>
 <body>
 
-  <!-- ========== CANVAS BACKGROUND ========== -->
-  <canvas id="bg-canvas"></canvas>
-
-  <!-- ========== LIGHT RAYS ========== -->
-  <div class="light-rays" aria-hidden="true">
-    <div class="ray ray-1"></div>
-    <div class="ray ray-2"></div>
-    <div class="ray ray-3"></div>
-    <div class="ray ray-4"></div>
-  </div>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+  <!-- ═══════════════════════════════════════════ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Aryan Sarvaiya — Home">
+        <span class="brand-initials">AS</span>
+        <span class="brand-dot"></span>
       </a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navMenu" role="list">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a></li>
       </ul>
-      <a href="#" class="btn btn-outline nav-cta" download>
-        Download Resume <span class="btn-arrow">↓</span>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </nav>
 
-  <!-- ========== HERO ========== -->
-  <section id="home" class="hero">
-    <div class="hero-container">
+  <main>
 
-      <!-- Left -->
-      <div class="hero-left reveal">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Available for Opportunities
-        </div>
-        <h1 class="hero-name">
-          <span class="name-line">Aryan</span>
-          <span class="name-line accent">Sarvaiya</span>
-        </h1>
-        <p class="hero-title">Aspiring DevOps Engineer</p>
-        <p class="hero-desc">
-          Building scalable infrastructure, automating deployments,
-          and exploring cloud technologies that power modern applications.
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn btn-primary">
-            View Projects <span class="btn-arrow">→</span>
-          </a>
-          <a href="#" class="btn btn-outline" download>
-            Download Resume <span class="btn-arrow">↓</span>
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num" data-target="12">0</span><span class="accent">+</span>
-            <span class="stat-label">Technologies</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="1">0</span>
-            <span class="stat-label">Featured Project</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="100">0</span><span class="accent">%</span>
-            <span class="stat-label">Dedication</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right -->
-      <div class="hero-right reveal reveal-delay-1">
-        <div class="portrait-wrapper">
-          <div class="portrait-glow"></div>
-          <div class="portrait-ring"></div>
-          <div class="portrait-inner">
-            <img src="profile.png" alt="Aryan Sarvaiya" class="portrait-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-            <div class="portrait-placeholder">
-              <span class="placeholder-initials">AS</span>
-            </div>
-          </div>
-          <!-- Orbit dots -->
-          <div class="orbit orbit-1">
-            <div class="orbit-dot"></div>
-          </div>
-          <div class="orbit orbit-2">
-            <div class="orbit-dot"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- ========== ABOUT ========== -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">About Me</span>
-        <h2 class="section-title">Building the Future,<br /><span class="accent">One Pipeline at a Time</span></h2>
-      </div>
-
-      <div class="about-grid">
-        <!-- Bio card -->
-        <div class="glass-card about-bio reveal">
-          <div class="card-icon">🎓</div>
-          <h3>MCA Student</h3>
-          <p class="card-institution">PES University</p>
-          <p>Currently pursuing my Master's in Computer Applications, diving deep into systems design, cloud infrastructure, and the DevOps philosophy of breaking walls between development and operations.</p>
-          <div class="tags">
-            <span class="tag">DevOps</span>
-            <span class="tag">Cloud</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Infrastructure</span>
-          </div>
-        </div>
-
-        <!-- Focus cards -->
-        <div class="about-focus">
-          <div class="glass-card focus-card reveal reveal-delay-1">
-            <div class="focus-icon">⚙️</div>
-            <div>
-              <h4>DevOps &amp; Cloud Technologies</h4>
-              <p>Bridging the gap between development and operations using modern tooling.</p>
-            </div>
-          </div>
-          <div class="glass-card focus-card reveal reveal-delay-2">
-            <div class="focus-icon">🔄</div>
-            <div>
-              <h4>Automation &amp; CI/CD Pipelines</h4>
-              <p>Designing pipelines that ship code faster with fewer human errors.</p>
-            </div>
-          </div>
-          <div class="glass-card focus-card reveal reveal-delay-3">
-            <div class="focus-icon">🏗️</div>
-            <div>
-              <h4>Scalable Infrastructure</h4>
-              <p>Infrastructure as code—repeatable, version-controlled, always audit-ready.</p>
-            </div>
-          </div>
-          <div class="glass-card focus-card reveal reveal-delay-4">
-            <div class="focus-icon">📡</div>
-            <div>
-              <h4>Continuous Learning</h4>
-              <p>Cloud certifications, open source contributions, and building in public.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SKILLS ========== -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Tech Stack</span>
-        <h2 class="section-title">Tools I Work With</h2>
-      </div>
-
-      <div class="skills-grid">
-        <!-- Each skill card -->
-        <div class="glass-card skill-card reveal" data-skill="Linux">
-          <div class="skill-icon">🐧</div>
-          <span class="skill-name">Linux</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-1" data-skill="Docker">
-          <div class="skill-icon">🐳</div>
-          <span class="skill-name">Docker</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-2" data-skill="AWS">
-          <div class="skill-icon">☁️</div>
-          <span class="skill-name">AWS</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-3" data-skill="Terraform">
-          <div class="skill-icon">🏔️</div>
-          <span class="skill-name">Terraform</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-4" data-skill="Kubernetes">
-          <div class="skill-icon">⎈</div>
-          <span class="skill-name">Kubernetes</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal" data-skill="Git">
-          <div class="skill-icon">🌿</div>
-          <span class="skill-name">Git</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-1" data-skill="GitHub">
-          <div class="skill-icon">🐙</div>
-          <span class="skill-name">GitHub</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-2" data-skill="Node.js">
-          <div class="skill-icon">🟢</div>
-          <span class="skill-name">Node.js</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-3" data-skill="Next.js">
-          <div class="skill-icon">▲</div>
-          <span class="skill-name">Next.js</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-4" data-skill="Jenkins">
-          <div class="skill-icon">🔧</div>
-          <span class="skill-name">Jenkins</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal" data-skill="Prometheus">
-          <div class="skill-icon">📊</div>
-          <span class="skill-name">Prometheus</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="62"></div></div>
-        </div>
-        <div class="glass-card skill-card reveal reveal-delay-1" data-skill="Nginx">
-          <div class="skill-icon">🔀</div>
-          <span class="skill-name">Nginx</span>
-          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PROJECTS ========== -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Featured Project</span>
-        <h2 class="section-title">InfraPilot</h2>
-        <p class="section-subtitle">A production-grade cloud deployment platform inspired by Vercel and Render.</p>
-      </div>
-
-      <div class="project-layout">
-
-        <!-- Project info -->
-        <div class="glass-card project-card reveal">
-          <div class="project-badges">
-            <span class="project-badge live">● Live Project</span>
-            <span class="project-badge">Open Source</span>
-          </div>
-          <h3 class="project-name">InfraPilot</h3>
-          <p class="project-desc">
-            A full-stack cloud deployment platform that lets developers push code and have it automatically built, containerized, and deployed to a Kubernetes cluster — with real-time logs and monitoring dashboards out of the box.
+    <!-- ═══════════════════════════════════════════ HERO ════ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero-grid">
+        <div class="hero-content reveal-left">
+          <p class="hero-eyebrow">Cloud Engineer · DevOps Engineer</p>
+          <h1 class="hero-headline">
+            Building Scalable<br />
+            <em>Cloud Infrastructure</em><br />
+            &amp; DevOps Solutions
+          </h1>
+          <p class="hero-intro">
+            Hi, I'm <strong>Aryan Sarvaiya</strong> — a Cloud and DevOps enthusiast 
+            pursuing MCA at PES University, Bengaluru. I build scalable cloud 
+            infrastructure, automate deployments, and craft production-ready systems 
+            using modern DevOps practices.
           </p>
-          <div class="project-features">
-            <div class="feature">
-              <span class="feature-dot"></span>
-              Authentication &amp; Authorization
-            </div>
-            <div class="feature">
-              <span class="feature-dot"></span>
-              Deployment Management
-            </div>
-            <div class="feature">
-              <span class="feature-dot"></span>
-              Real-time Monitoring
-            </div>
-            <div class="feature">
-              <span class="feature-dot"></span>
-              Live Log Streaming
-            </div>
-            <div class="feature">
-              <span class="feature-dot"></span>
-              Infrastructure Automation
-            </div>
+          <div class="hero-tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Linux</span>
           </div>
-          <div class="project-stack">
-            <span class="stack-tag">Docker</span>
-            <span class="stack-tag">Terraform</span>
-            <span class="stack-tag">AWS</span>
-            <span class="stack-tag">Jenkins</span>
-            <span class="stack-tag">Kubernetes</span>
-            <span class="stack-tag">Next.js</span>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Get in Touch</a>
           </div>
-          <div class="project-btns">
-            <a href="#" class="btn btn-primary">
-              View Project <span class="btn-arrow">→</span>
+          <div class="hero-social">
+            <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
             </a>
-            <a href="#" class="btn btn-outline">
-              GitHub <span class="btn-arrow">↗</span>
+            <a href="mailto:sarvaiyaaryan675@gmail.com" aria-label="Send email" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="tel:+917573842020" aria-label="Call Aryan" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 11.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             </a>
           </div>
         </div>
-
-        <!-- Architecture flow -->
-        <div class="glass-card arch-card reveal reveal-delay-2">
-          <h4 class="arch-title">Architecture Flow</h4>
-          <div class="arch-flow">
-            <div class="arch-node arch-node-top">
-              <div class="arch-box">User</div>
+        <div class="hero-visual reveal-right">
+          <div class="hero-avatar-wrap">
+            <div class="hero-avatar" aria-hidden="true">
+              <div class="avatar-placeholder">
+                <span class="avatar-initials">AS</span>
+              </div>
             </div>
-            <div class="arch-arrow-down"><div class="arch-line"></div><div class="arch-arrowhead"></div></div>
-            <div class="arch-node">
-              <div class="arch-box">Frontend</div>
-            </div>
-            <div class="arch-arrow-down"><div class="arch-line"></div><div class="arch-arrowhead"></div></div>
-            <div class="arch-node">
-              <div class="arch-box">Backend API</div>
-            </div>
-            <div class="arch-arrow-down"><div class="arch-line"></div><div class="arch-arrowhead"></div></div>
-            <div class="arch-node">
-              <div class="arch-box highlight-box">Docker</div>
-            </div>
-            <div class="arch-arrow-down"><div class="arch-line"></div><div class="arch-arrowhead"></div></div>
-            <div class="arch-node">
-              <div class="arch-box highlight-box">Jenkins CI/CD</div>
-            </div>
-            <div class="arch-arrow-down"><div class="arch-line"></div><div class="arch-arrowhead"></div></div>
-            <div class="arch-node">
-              <div class="arch-box highlight-box">Kubernetes</div>
-            </div>
-            <div class="arch-arrow-down"><div class="arch-line"></div><div class="arch-arrowhead"></div></div>
-            <div class="arch-node">
-              <div class="arch-box">Monitoring</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== JOURNEY ========== -->
-  <section id="journey" class="section journey-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">My Path</span>
-        <h2 class="section-title">Learning Journey</h2>
-      </div>
-
-      <!-- Timeline -->
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2024</div>
-          <div class="glass-card timeline-card">
-            <h4>Started Coding</h4>
-            <p>First steps into programming — logic, data structures, and the thrill of making something from nothing.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal reveal-delay-1">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2025</div>
-          <div class="glass-card timeline-card">
-            <h4>Web Development</h4>
-            <p>Built full-stack applications, learned the web platform inside-out, and shipped my first public projects.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal reveal-delay-2">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2026</div>
-          <div class="glass-card timeline-card">
-            <h4>Joined MCA — PES University</h4>
-            <p>Deep-diving into computer science fundamentals, distributed systems, and cloud architecture.</p>
-          </div>
-        </div>
-        <div class="timeline-item active reveal reveal-delay-3">
-          <div class="timeline-dot pulse"></div>
-          <div class="timeline-year accent-year">Now</div>
-          <div class="glass-card timeline-card active-card">
-            <h4>Building InfraPilot ⚡</h4>
-            <p>Designing and shipping a production-grade deployment platform — real infrastructure, real scale.</p>
-          </div>
-        </div>
-        <div class="timeline-item reveal reveal-delay-4">
-          <div class="timeline-dot future-dot"></div>
-          <div class="timeline-year future-year">Future</div>
-          <div class="glass-card timeline-card future-card">
-            <h4>DevOps Engineer</h4>
-            <p>Cloud-native, automation-first, and building systems that teams rely on 24/7.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- DevOps Roadmap -->
-      <div class="roadmap reveal">
-        <h3 class="roadmap-title">DevOps Roadmap</h3>
-        <div class="roadmap-grid">
-          <div class="roadmap-col">
-            <div class="roadmap-label completed">✅ Completed</div>
-            <div class="glass-card roadmap-card">
-              <div class="roadmap-item">Linux</div>
-              <div class="roadmap-item">Git &amp; GitHub</div>
-              <div class="roadmap-item">Docker</div>
-            </div>
-          </div>
-          <div class="roadmap-col">
-            <div class="roadmap-label learning">🔄 Learning</div>
-            <div class="glass-card roadmap-card">
-              <div class="roadmap-item">AWS</div>
-              <div class="roadmap-item">Terraform</div>
-              <div class="roadmap-item">Kubernetes</div>
-            </div>
-          </div>
-          <div class="roadmap-col">
-            <div class="roadmap-label future">🚀 Upcoming</div>
-            <div class="glass-card roadmap-card">
-              <div class="roadmap-item">Monitoring &amp; Observability</div>
-              <div class="roadmap-item">Advanced Cloud Architecture</div>
+            <div class="hero-terminal" aria-hidden="true">
+              <div class="terminal-bar">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-label">aryan@cloud:~</span>
+              </div>
+              <div class="terminal-body">
+                <p><span class="t-prompt">$</span> <span class="t-cmd" id="typedCmd"></span><span class="t-cursor">▍</span></p>
+                <p class="t-out" id="termOut"></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <!-- ========== CONTACT ========== -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-eyebrow">Get In Touch</span>
-        <h2 class="section-title">Let's Build Something<br /><span class="accent">Amazing Together</span></h2>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-label">Scroll</span>
       </div>
+    </section>
 
-      <div class="contact-grid">
-
-        <!-- Contact links -->
-        <div class="contact-links">
-          <a href="mailto:aryan@example.com" class="glass-card contact-card reveal">
-            <div class="contact-icon">✉️</div>
-            <div class="contact-info">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">aryan@example.com</span>
+    <!-- ═══════════════════════════════════════════ ABOUT ═══ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">About Me</div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <h2 id="about-title" class="section-heading">Passionate about<br /><em>cloud-native engineering</em></h2>
+            <p>I am deeply passionate about Cloud Computing, DevOps, Linux, and automation — driven by the goal of building secure, scalable, production-ready infrastructure. My journey spans containerisation, Infrastructure as Code, CI/CD, and monitoring.</p>
+            <p>Currently pursuing my MCA at PES University, Bengaluru, following a B.C.A. (Honours) in Cloud Computing from Marwadi University. I bridge academic foundations with hands-on engineering through real-world projects.</p>
+            <p class="career-note"><em>Seeking internship and full-time opportunities in Cloud Engineering or DevOps Engineering.</em></p>
+            <div class="about-meta">
+              <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">Rajkot, Gujarat, India</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Status</span>
+                <span class="meta-value meta-available">Open to Opportunities</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Languages</span>
+                <span class="meta-value">English · Hindi · Gujarati</span>
+              </div>
             </div>
-            <span class="contact-arrow">→</span>
+          </div>
+          <div class="about-interests reveal">
+            <h3 class="sub-heading">Areas of Interest</h3>
+            <ul class="interest-list" role="list">
+              <li>Cloud Computing & AWS</li>
+              <li>DevOps Engineering</li>
+              <li>Linux Administration</li>
+              <li>Infrastructure as Code</li>
+              <li>Container Orchestration</li>
+              <li>CI/CD Pipelines</li>
+              <li>Platform Engineering</li>
+              <li>Site Reliability Engineering</li>
+              <li>Monitoring & Observability</li>
+              <li>Cloud-Native Technologies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ EDUCATION ═ -->
+    <section class="section education" id="education" aria-labelledby="edu-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Education</div>
+        <h2 id="edu-title" class="section-heading reveal">Academic Foundation</h2>
+        <div class="edu-grid">
+          <article class="edu-card reveal" aria-label="Master of Computer Applications">
+            <div class="edu-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="edu-content">
+              <span class="edu-degree">Master of Computer Applications</span>
+              <span class="edu-institution">PES University, Bengaluru</span>
+              <span class="edu-status current">Currently Pursuing</span>
+            </div>
+          </article>
+          <article class="edu-card reveal" aria-label="Bachelor of Computer Applications">
+            <div class="edu-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="edu-content">
+              <span class="edu-degree">B.C.A. (Honours) in Cloud Computing</span>
+              <span class="edu-institution">Marwadi University</span>
+              <span class="edu-status completed">Completed</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ SKILLS ════ -->
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Technical Skills</div>
+        <h2 id="skills-title" class="section-heading reveal">Tools &amp; Technologies</h2>
+        <div class="skills-grid">
+
+          <div class="skill-category reveal" aria-label="Cloud skills">
+            <div class="skill-cat-header">
+              <svg class="skill-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+              <span>Cloud</span>
+            </div>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-name">AWS</span><span class="skill-bar"><span class="skill-fill" style="--fill:75%"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal" aria-label="DevOps skills">
+            <div class="skill-cat-header">
+              <svg class="skill-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+              <span>DevOps</span>
+            </div>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-name">Docker</span><span class="skill-bar"><span class="skill-fill" style="--fill:80%"></span></span></li>
+              <li class="skill-item"><span class="skill-name">Ansible</span><span class="skill-bar"><span class="skill-fill" style="--fill:70%"></span></span></li>
+              <li class="skill-item"><span class="skill-name">Terraform</span><span class="skill-bar"><span class="skill-fill" style="--fill:65%"></span></span></li>
+              <li class="skill-item"><span class="skill-name">Prometheus</span><span class="skill-bar"><span class="skill-fill" style="--fill:60%"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal" aria-label="Systems skills">
+            <div class="skill-cat-header">
+              <svg class="skill-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>Systems</span>
+            </div>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-name">Linux</span><span class="skill-bar"><span class="skill-fill" style="--fill:82%"></span></span></li>
+              <li class="skill-item"><span class="skill-name">Git</span><span class="skill-bar"><span class="skill-fill" style="--fill:85%"></span></span></li>
+              <li class="skill-item"><span class="skill-name">GitHub</span><span class="skill-bar"><span class="skill-fill" style="--fill:85%"></span></span></li>
+            </ul>
+          </div>
+
+          <div class="skill-category reveal" aria-label="Programming skills">
+            <div class="skill-cat-header">
+              <svg class="skill-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>Programming</span>
+            </div>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-name">Python</span><span class="skill-bar"><span class="skill-fill" style="--fill:72%"></span></span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Tech Stack Pills -->
+        <div class="tech-stack reveal">
+          <h3 class="sub-heading">Full Tech Stack</h3>
+          <div class="stack-pills" role="list">
+            <span class="stack-pill" role="listitem">AWS</span>
+            <span class="stack-pill" role="listitem">Docker</span>
+            <span class="stack-pill" role="listitem">Linux</span>
+            <span class="stack-pill" role="listitem">Git</span>
+            <span class="stack-pill" role="listitem">Ansible</span>
+            <span class="stack-pill" role="listitem">Terraform</span>
+            <span class="stack-pill" role="listitem">Prometheus</span>
+            <span class="stack-pill" role="listitem">Python</span>
+            <span class="stack-pill" role="listitem">GitHub</span>
+            <span class="stack-pill learning" role="listitem">Kubernetes ✦</span>
+            <span class="stack-pill learning" role="listitem">Jenkins ✦</span>
+            <span class="stack-pill learning" role="listitem">GitHub Actions ✦</span>
+            <span class="stack-pill learning" role="listitem">CI/CD ✦</span>
+          </div>
+          <p class="stack-legend"><span class="legend-dot learning-dot"></span> Currently learning</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ PROJECTS ══ -->
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Featured Projects</div>
+        <h2 id="projects-title" class="section-heading reveal">Production-Grade Work</h2>
+        <div class="projects-grid">
+
+          <article class="project-card reveal" aria-label="InfraPilot project">
+            <div class="project-img-wrap" aria-hidden="true">
+              <div class="project-img-placeholder project-img-1">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">InfraPilot</h3>
+                <div class="project-links">
+                  <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="InfraPilot GitHub repository">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                  </a>
+                  <a href="#case-study-infrapilot" class="project-link" aria-label="InfraPilot case study">Case Study</a>
+                </div>
+              </div>
+              <p class="project-desc">A production-grade cloud deployment platform inspired by modern PaaS tools — automating deployment pipelines, provisioning infrastructure, and monitoring live workloads at scale.</p>
+              <div class="project-stack">
+                <span class="p-tag">AWS</span>
+                <span class="p-tag">Docker</span>
+                <span class="p-tag">Terraform</span>
+                <span class="p-tag">Ansible</span>
+                <span class="p-tag">Python</span>
+                <span class="p-tag">Prometheus</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" aria-label="DevOps Production Project">
+            <div class="project-img-wrap" aria-hidden="true">
+              <div class="project-img-placeholder project-img-2">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">DevOps Production Project</h3>
+                <div class="project-links">
+                  <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="DevOps Production Project GitHub repository">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                  </a>
+                  <a href="#case-study-devops" class="project-link" aria-label="DevOps Production Project case study">Case Study</a>
+                </div>
+              </div>
+              <p class="project-desc">A comprehensive DevOps implementation demonstrating end-to-end CI/CD workflows, Infrastructure as Code with Terraform, containerised deployments via Docker, and observability with Prometheus.</p>
+              <div class="project-stack">
+                <span class="p-tag">CI/CD</span>
+                <span class="p-tag">Docker</span>
+                <span class="p-tag">Terraform</span>
+                <span class="p-tag">Linux</span>
+                <span class="p-tag">Git</span>
+                <span class="p-tag">Monitoring</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════ CASE STUDIES ═════ -->
+    <section class="section case-studies" id="case-studies" aria-labelledby="cs-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Project Case Studies</div>
+        <h2 id="cs-title" class="section-heading reveal">Engineering Deep Dives</h2>
+
+        <div class="case-study reveal" id="case-study-infrapilot">
+          <div class="cs-number" aria-hidden="true">01</div>
+          <div class="cs-content">
+            <h3 class="cs-title">InfraPilot — Cloud Deployment Platform</h3>
+            <div class="cs-grid">
+              <div class="cs-block">
+                <h4>Problem</h4>
+                <p>Teams lacked a unified, automated deployment surface for managing multi-environment cloud infrastructure, leading to manual provisioning errors and slow release cycles.</p>
+              </div>
+              <div class="cs-block">
+                <h4>Solution</h4>
+                <p>Designed a self-service deployment platform integrating Terraform for IaC, Ansible for configuration management, Docker for containerisation, and Prometheus for real-time monitoring.</p>
+              </div>
+              <div class="cs-block">
+                <h4>Architecture</h4>
+                <p>Modular pipeline architecture: code push → Terraform plan/apply → Ansible playbook execution → Docker container deployment to AWS → Prometheus scrape and alerting.</p>
+              </div>
+              <div class="cs-block">
+                <h4>Outcome</h4>
+                <p>Reduced deployment time by automating the full provisioning cycle. Infrastructure changes became reproducible, version-controlled, and auditable across environments.</p>
+              </div>
+            </div>
+            <div class="cs-stack">
+              <span class="p-tag">AWS</span>
+              <span class="p-tag">Terraform</span>
+              <span class="p-tag">Ansible</span>
+              <span class="p-tag">Docker</span>
+              <span class="p-tag">Prometheus</span>
+              <span class="p-tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-study reveal" id="case-study-devops">
+          <div class="cs-number" aria-hidden="true">02</div>
+          <div class="cs-content">
+            <h3 class="cs-title">DevOps Production Project — CI/CD &amp; Observability</h3>
+            <div class="cs-grid">
+              <div class="cs-block">
+                <h4>Problem</h4>
+                <p>Manual deployment workflows created deployment drift and made rollbacks risky. Lack of observability meant issues were only caught post-impact.</p>
+              </div>
+              <div class="cs-block">
+                <h4>Solution</h4>
+                <p>Implemented a full CI/CD pipeline with automated testing, Dockerised application builds, Terraform-managed infrastructure, and Prometheus metrics with alerting rules.</p>
+              </div>
+              <div class="cs-block">
+                <h4>Architecture</h4>
+                <p>Git commit triggers pipeline → automated tests → Docker image build and push → Terraform apply → deployment to Linux server → Prometheus + Grafana monitoring stack.</p>
+              </div>
+              <div class="cs-block">
+                <h4>Outcome</h4>
+                <p>Achieved zero-downtime deployments with automated rollback capability. Observability stack provided early detection and significantly reduced mean time to resolution.</p>
+              </div>
+            </div>
+            <div class="cs-stack">
+              <span class="p-tag">CI/CD</span>
+              <span class="p-tag">Docker</span>
+              <span class="p-tag">Terraform</span>
+              <span class="p-tag">Prometheus</span>
+              <span class="p-tag">Linux</span>
+              <span class="p-tag">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════ ARCHITECTURE ═════ -->
+    <section class="section architecture" id="architecture" aria-labelledby="arch-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Architecture Showcase</div>
+        <h2 id="arch-title" class="section-heading reveal">Deployment Flow</h2>
+        <p class="section-subtext reveal">A visual representation of a production-grade cloud deployment pipeline — from source code commit to live application serving real traffic.</p>
+        <div class="arch-flow reveal" role="img" aria-label="Deployment pipeline: GitHub to CI/CD to Docker to Jenkins to Kubernetes to AWS to Live Application">
+          <div class="arch-node" data-step="1">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <span class="arch-node-label">GitHub</span>
+            <span class="arch-node-sub">Source Code</span>
+          </div>
+          <div class="arch-connector" aria-hidden="true"><span class="arch-arrow"></span></div>
+          <div class="arch-node" data-step="2">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="arch-node-label">CI/CD</span>
+            <span class="arch-node-sub">Automated Pipeline</span>
+          </div>
+          <div class="arch-connector" aria-hidden="true"><span class="arch-arrow"></span></div>
+          <div class="arch-node" data-step="3">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <span class="arch-node-label">Docker</span>
+            <span class="arch-node-sub">Containerisation</span>
+          </div>
+          <div class="arch-connector" aria-hidden="true"><span class="arch-arrow"></span></div>
+          <div class="arch-node" data-step="4">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <span class="arch-node-label">Jenkins</span>
+            <span class="arch-node-sub">Orchestration</span>
+          </div>
+          <div class="arch-connector" aria-hidden="true"><span class="arch-arrow"></span></div>
+          <div class="arch-node" data-step="5">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <span class="arch-node-label">Kubernetes</span>
+            <span class="arch-node-sub">Scaling & Healing</span>
+          </div>
+          <div class="arch-connector" aria-hidden="true"><span class="arch-arrow"></span></div>
+          <div class="arch-node" data-step="6">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+            </div>
+            <span class="arch-node-label">AWS</span>
+            <span class="arch-node-sub">Cloud Hosting</span>
+          </div>
+          <div class="arch-connector" aria-hidden="true"><span class="arch-arrow"></span></div>
+          <div class="arch-node arch-node-final" data-step="7">
+            <div class="arch-node-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <span class="arch-node-label">Live App</span>
+            <span class="arch-node-sub">Production</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════ TIMELINE ════════ -->
+    <section class="section timeline" id="timeline" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Journey</div>
+        <h2 id="timeline-title" class="section-heading reveal">Timeline</h2>
+        <div class="timeline-track">
+
+          <div class="timeline-item reveal" data-side="left">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2020 – 2023</span>
+              <h3>B.C.A. (Honours) — Cloud Computing</h3>
+              <p>Marwadi University. Built foundational knowledge in cloud computing, networking, Linux, and software development.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-side="right">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2023</span>
+              <h3>Deep Dive into DevOps</h3>
+              <p>Self-directed learning in Docker, Ansible, Terraform, and Linux administration. Started building real-world automation projects.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-side="left">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2024</span>
+              <h3>InfraPilot & DevOps Projects</h3>
+              <p>Built production-grade cloud deployment and CI/CD pipeline projects, applying IaC, containerisation, and monitoring at scale.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-side="right">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">2024 – Present</span>
+              <h3>MCA — PES University, Bengaluru</h3>
+              <p>Currently pursuing Master of Computer Applications, deepening expertise in distributed systems, cloud architecture, and advanced software engineering.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal" data-side="left">
+            <div class="timeline-dot timeline-dot-current" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Now</span>
+              <h3>Learning Kubernetes, Jenkins &amp; CI/CD</h3>
+              <p>Actively expanding into container orchestration, advanced pipeline engineering, cloud security, and system design — targeting Cloud/DevOps Engineer roles.</p>
+              <span class="timeline-badge">In Progress</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ CURRENTLY LEARNING ═ -->
+    <section class="section learning" id="learning" aria-labelledby="learning-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Currently Learning</div>
+        <h2 id="learning-title" class="section-heading reveal">Expanding the Stack</h2>
+        <div class="learning-grid">
+          <div class="learning-card reveal">
+            <div class="learning-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>Kubernetes</h3>
+            <p>Container orchestration, pod scheduling, services, ingress, HPA, and cluster management.</p>
+            <div class="learning-progress" role="progressbar" aria-label="Kubernetes learning progress: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+              <div class="lp-bar" style="--lp:40%"></div>
+            </div>
+          </div>
+          <div class="learning-card reveal">
+            <div class="learning-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Jenkins</h3>
+            <p>Pipeline as code, declarative pipelines, plugin ecosystem, and advanced build orchestration.</p>
+            <div class="learning-progress" role="progressbar" aria-label="Jenkins learning progress: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+              <div class="lp-bar" style="--lp:35%"></div>
+            </div>
+          </div>
+          <div class="learning-card reveal">
+            <div class="learning-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+            </div>
+            <h3>GitHub Actions</h3>
+            <p>Workflow automation, reusable actions, matrix builds, secrets management, and OIDC integration.</p>
+            <div class="learning-progress" role="progressbar" aria-label="GitHub Actions learning progress: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+              <div class="lp-bar" style="--lp:50%"></div>
+            </div>
+          </div>
+          <div class="learning-card reveal">
+            <div class="learning-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Cloud Security</h3>
+            <p>IAM, VPC design, security groups, encryption, compliance frameworks, and zero-trust principles.</p>
+            <div class="learning-progress" role="progressbar" aria-label="Cloud Security learning progress: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+              <div class="lp-bar" style="--lp:30%"></div>
+            </div>
+          </div>
+          <div class="learning-card reveal">
+            <div class="learning-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3>Monitoring &amp; Observability</h3>
+            <p>Prometheus, Grafana, alerting rules, distributed tracing, and the three pillars of observability.</p>
+            <div class="learning-progress" role="progressbar" aria-label="Monitoring learning progress: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+              <div class="lp-bar" style="--lp:55%"></div>
+            </div>
+          </div>
+          <div class="learning-card reveal">
+            <div class="learning-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>System Design</h3>
+            <p>Scalability patterns, load balancing, caching strategies, database sharding, and distributed system principles.</p>
+            <div class="learning-progress" role="progressbar" aria-label="System Design learning progress: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+              <div class="lp-bar" style="--lp:45%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════════════════════ GITHUB ═════ -->
+    <section class="section github-activity" id="github" aria-labelledby="github-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">GitHub Activity</div>
+        <h2 id="github-title" class="section-heading reveal">Consistent &amp; Curious</h2>
+        <div class="github-content reveal">
+          <div class="github-stats-row">
+            <div class="gh-stat">
+              <span class="gh-stat-num" data-target="2">0</span>
+              <span class="gh-stat-label">Public Projects</span>
+            </div>
+            <div class="gh-stat">
+              <span class="gh-stat-num" data-target="120">0</span>
+              <span class="gh-stat-label">Contributions (est.)</span>
+            </div>
+            <div class="gh-stat">
+              <span class="gh-stat-num" data-target="5">0</span>
+              <span class="gh-stat-label">Repositories</span>
+            </div>
+          </div>
+          <div class="github-cta">
+            <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ CERTIFICATIONS ════ -->
+    <section class="section certifications" id="certifications" aria-labelledby="cert-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Certifications</div>
+        <h2 id="cert-title" class="section-heading reveal">Credentials &amp; Learning</h2>
+        <div class="cert-grid">
+          <div class="cert-card reveal">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div class="cert-content">
+              <span class="cert-name">AWS Cloud Practitioner</span>
+              <span class="cert-issuer">Amazon Web Services</span>
+              <span class="cert-status cert-planned">Planned</span>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div class="cert-content">
+              <span class="cert-name">Certified Kubernetes Administrator</span>
+              <span class="cert-issuer">CNCF / Linux Foundation</span>
+              <span class="cert-status cert-planned">Planned</span>
+            </div>
+          </div>
+          <div class="cert-card reveal">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="cert-content">
+              <span class="cert-name">HashiCorp Certified: Terraform Associate</span>
+              <span class="cert-issuer">HashiCorp</span>
+              <span class="cert-status cert-planned">Planned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ STATISTICS ════════ -->
+    <section class="section statistics" id="statistics" aria-labelledby="stats-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Statistics</div>
+        <h2 id="stats-title" class="section-heading reveal">By the Numbers</h2>
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="2">0</span>
+            <span class="stat-label">Production Projects</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="8">0</span>
+            <span class="stat-label">Technologies Mastered</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="8">0</span>
+            <span class="stat-label">Topics in Learning</span>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Languages Spoken</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════ RESUME ══════ -->
+    <section class="section resume-section" id="resume" aria-labelledby="resume-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Resume</div>
+        <h2 id="resume-title" class="section-heading reveal">Full Profile</h2>
+        <div class="resume-cta reveal">
+          <p>Get the complete picture — education, projects, skills, and career objective in a single document.</p>
+          <a href="resume.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Download Aryan Sarvaiya's resume PDF">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener" class="glass-card contact-card reveal reveal-delay-1">
-            <div class="contact-icon">🐙</div>
-            <div class="contact-info">
-              <span class="contact-label">GitHub</span>
-              <span class="contact-value">github.com/aryan</span>
-            </div>
-            <span class="contact-arrow">→</span>
-          </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="glass-card contact-card reveal reveal-delay-2">
-            <div class="contact-icon">💼</div>
-            <div class="contact-info">
-              <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">linkedin.com/in/aryan</span>
-            </div>
-            <span class="contact-arrow">→</span>
-          </a>
         </div>
-
-        <!-- Availability -->
-        <div class="glass-card availability-card reveal reveal-delay-3">
-          <div class="avail-header">
-            <div class="avail-status">
-              <span class="avail-dot"></span>
-              Available
-            </div>
-          </div>
-          <h3>Open to Opportunities</h3>
-          <div class="avail-list">
-            <div class="avail-item">
-              <span class="avail-check">✓</span> Internships
-            </div>
-            <div class="avail-item">
-              <span class="avail-check">✓</span> DevOps Roles
-            </div>
-            <div class="avail-item">
-              <span class="avail-check">✓</span> Learning Collaborations
-            </div>
-            <div class="avail-item">
-              <span class="avail-check">✓</span> Open Source Contributions
-            </div>
-          </div>
-          <a href="mailto:aryan@example.com" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:1.5rem;">
-            Say Hello <span class="btn-arrow">→</span>
-          </a>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
+    <!-- ════════════════════════════════════════ CONTACT ═════ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-eyebrow reveal">Contact</div>
+        <h2 id="contact-title" class="section-heading reveal">Let's Connect</h2>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-intro">I'm actively looking for internship and full-time roles in Cloud Engineering or DevOps. If you're hiring or collaborating on interesting infrastructure work, I'd love to hear from you.</p>
+            <div class="contact-links">
+              <a href="mailto:sarvaiyaaryan675@gmail.com" class="contact-item" aria-label="Email Aryan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>sarvaiyaaryan675@gmail.com</span>
+              </a>
+              <a href="tel:+917573842020" class="contact-item" aria-label="Call Aryan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 11.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>+91 7573842020</span>
+              </a>
+              <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener noreferrer" class="contact-item" aria-label="GitHub profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                <span>github.com/aryansarvaiya1305</span>
+              </a>
+              <div class="contact-item contact-item-text">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Rajkot, Gujarat, India</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="your@email.com" autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" name="subject" placeholder="Internship Opportunity / Collaboration" />
+              </div>
+              <div class="form-group">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary form-submit" aria-label="Send message">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Message sent! I'll get back to you soon.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════ FOOTER ═════ -->
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-inner">
-        <a href="#home" class="nav-logo">
-          <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
-        </a>
-        <p class="footer-copy">© 2026 Aryan Sarvaiya. Crafted with precision.</p>
-        <a href="#home" class="back-top" aria-label="Back to top">↑</a>
+        <div class="footer-brand">
+          <span class="brand-initials">AS</span>
+          <span class="footer-name">Aryan Sarvaiya</span>
+          <span class="footer-role">Cloud Engineer · DevOps Engineer</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://github.com/aryansarvaiya1305" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:sarvaiyaaryan675@gmail.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> Aryan Sarvaiya · Rajkot, Gujarat, India</p>
+        <p class="footer-note">Built with HTML5, CSS3 &amp; Vanilla JavaScript</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/terminal.js" defer></script>
+
 </body>
 </html>
